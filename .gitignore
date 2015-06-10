@@ -1,0 +1,3 @@
+#excluir los archivos de excel generados por Python
+*.xls
+
