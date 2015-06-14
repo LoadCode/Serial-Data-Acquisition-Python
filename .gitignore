@@ -1,3 +1,5 @@
 #excluir los archivos de excel generados por Python
+#excluir los archivos temporales que genera linux (~)
 *.xls
-
+*.py~
+*.pyc
