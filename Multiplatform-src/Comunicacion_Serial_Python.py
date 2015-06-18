@@ -30,7 +30,7 @@ def SaveData(DataArray,File_name):
     libro.save(File_name+'.xls')
     
 
-def DataLogging(totalData):
+def DataLogging(totalData,fileName):
     #This function gets a number representing how much
     #values you're going to register.
     data = 0.0
@@ -40,11 +40,11 @@ def DataLogging(totalData):
         data = float(ser.readline())
         print data
         valsVector[i] = data
-    SaveData(valsVector,'Vector de Valores')
+    SaveData(valsVector,fileName)
 
 AvailablePorts = portscanner.ListAvailablePorts()
 ser = serial.Serial(AvailablePorts[0],9600,timeout = 1)
 InitDataLogging()
-DataLogging(100)
+DataLogging(200,'Datos')
 print 'terminado'
 FinishDataLogging()
